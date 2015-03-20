@@ -10,14 +10,14 @@ Gem::Specification.new do |s|
   s.authors     = ["Jesse Farmer"]
   s.email       = ["jesse@anysoft.us"]
   s.homepage    = "anysoft.us"
-  s.summary     = "TODO: Summary of FarmStore."
-  s.description = "TODO: Description of FarmStore."
+  s.summary     = "eCommerce platform"
+  s.description = "Basic eCommerce module"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
 
   s.add_dependency "rails", "~> 4.2.0"
-  s.add_dependency 'devise', "~> 3.0"
+
   s.add_development_dependency "pg"
 
 
