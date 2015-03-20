@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    store (0.0.2)
+    farm_store (0.0.2)
       rails (~> 4.2.0)
 
 GEM
@@ -108,5 +108,5 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  farm_store!
   pg
-  store!
