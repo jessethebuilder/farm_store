@@ -1,6 +1,6 @@
 module FarmStore
   class Engine < ::Rails::Engine
-    isolate_namespace FarmStore
+    # isolate_namespace FarmStore
 
     initializer :append_migrations do |app|
       unless app.root.to_s.match root.to_s

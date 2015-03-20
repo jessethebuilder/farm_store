@@ -4,6 +4,7 @@ class CreateFarmStoreItems < ActiveRecord::Migration
       t.string :name
       t.text :pricing
       t.text :description
+      t.float :tax_rate
 
       t.timestamps null: false
     end
