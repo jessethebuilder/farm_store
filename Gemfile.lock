@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    farm_store (0.0.1)
+    farm_store (0.0.2)
       rails (~> 4.2.0)
 
 GEM
