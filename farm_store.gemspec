@@ -5,7 +5,7 @@ require "farm_store/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "farm_store"
+  s.name        = "store"
   s.version     = FarmStore::VERSION
   s.authors     = ["Jesse Farmer"]
   s.email       = ["jesse@anysoft.us"]

@@ -12,5 +12,10 @@ class FarmStoreOrder < ActiveRecord::Base
     self.phase ||= 'open'
   end
 
+  def store
+    #at some point, this may change, but for now, it relies on a single Store record to exist in the db
+
+  end
+
 
 end

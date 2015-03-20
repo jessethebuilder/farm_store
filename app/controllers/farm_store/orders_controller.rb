@@ -1,4 +1,4 @@
-require_dependency "farm_store/application_controller"
+require_dependency "store/application_controller"
 
 module FarmStore
   class OrdersController < ApplicationController
