@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Items:</strong>
+  <%= @order.items %>
+</p>
+
+<p>
+  <strong>Has orders:</strong>
+  <%= @order.has_orders_id %>
+</p>
+
+<p>
+  <strong>Has orders type:</strong>
+  <%= @order.has_orders_type %>
+</p>
+
+<p>
+  <strong>Phase:</strong>
+  <%= @order.phase %>
+</p>
+
+<p>
+  <strong>Billing address:</strong>
+  <%= @order.billing_address %>
+</p>
+
+<p>
+  <strong>Mailing address:</strong>
+  <%= @order.mailing_address %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
