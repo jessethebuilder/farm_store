@@ -5,8 +5,7 @@ class FarmStoreItem < ActiveRecord::Base
   serialize :pricing, Hash
 
   def tax_rate
-    #expects this to be constant to be defined
-    read_attribute
-    FARM_STORE_TAX_RATE
+    rate = read_attribute(:tax_rate) || farm_store_standard_tax_rate
+    rate * 0.01
   end
 end

@@ -11,4 +11,14 @@ class FarmStoreOrder < ActiveRecord::Base
   after_initialize do
     self.phase ||= 'open'
   end
+
+  def total
+    items.inject(0){ |n, i| n + i.total }
+  end
+
+  def total_after_tax
+    items.inject(0){ |n, i| n + i.total_after_tax }
+  end
+
+  scope :open, -> { where(:phase => 'open') }
 end
