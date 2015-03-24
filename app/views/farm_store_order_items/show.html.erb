@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Farm store order:</strong>
+  <%= @farm_store_order_item.farm_store_order_id %>
+</p>
+
+<p>
+  <strong>Pricing key:</strong>
+  <%= @farm_store_order_item.pricing_key %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @farm_store_order_item.quantity %>
+</p>
+
+<p>
+  <strong>Tax rate:</strong>
+  <%= @farm_store_order_item.tax_rate %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @farm_store_order_item.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @farm_store_order_item.price %>
+</p>
+
+<%= link_to 'Edit', edit_farm_store_order_item_path(@farm_store_order_item) %> |
+<%= link_to 'Back', farm_store_order_items_path %>

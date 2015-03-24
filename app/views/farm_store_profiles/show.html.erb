@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Standard tax rate:</strong>
+  <%= @farm_store_profile.standard_tax_rate %>
+</p>
+
+<p>
+  <strong>Has farm store profile:</strong>
+  <%= @farm_store_profile.has_farm_store_profile_id %>
+</p>
+
+<p>
+  <strong>Has farm store profile type:</strong>
+  <%= @farm_store_profile.has_farm_store_profile_type %>
+</p>
+
+<%= link_to 'Edit', edit_farm_store_profile_path(@farm_store_profile) %> |
+<%= link_to 'Back', farm_store_profiles_path %>

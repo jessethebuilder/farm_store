@@ -1,0 +1,41 @@
+<%= form_for(@farm_store_order_item) do |f| %>
+  <% if @farm_store_order_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@farm_store_order_item.errors.count, "error") %> prohibited this farm_store_order_item from being saved:</h2>
+
+      <ul>
+      <% @farm_store_order_item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :farm_store_order_id %><br>
+    <%= f.number_field :farm_store_order_id %>
+  </div>
+  <div class="field">
+    <%= f.label :pricing_key %><br>
+    <%= f.text_field :pricing_key %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.text_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :tax_rate %><br>
+    <%= f.text_field :tax_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

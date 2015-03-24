@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Farm Store Order Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Farm store order</th>
+      <th>Pricing key</th>
+      <th>Quantity</th>
+      <th>Tax rate</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @farm_store_order_items.each do |farm_store_order_item| %>
+      <tr>
+        <td><%= farm_store_order_item.farm_store_order_id %></td>
+        <td><%= farm_store_order_item.pricing_key %></td>
+        <td><%= farm_store_order_item.quantity %></td>
+        <td><%= farm_store_order_item.tax_rate %></td>
+        <td><%= farm_store_order_item.name %></td>
+        <td><%= farm_store_order_item.price %></td>
+        <td><%= link_to 'Show', farm_store_order_item %></td>
+        <td><%= link_to 'Edit', edit_farm_store_order_item_path(farm_store_order_item) %></td>
+        <td><%= link_to 'Destroy', farm_store_order_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Farm store order item', new_farm_store_order_item_path %>
