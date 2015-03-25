@@ -4,19 +4,16 @@ class FarmStoreOrder < ActiveRecord::Base
 
   validates :phase, presence: true, inclusion: {:in => %w|open completed sent delivered returned|}
 
-  # serialize :items, Array
   #addresses are saved as whatever you want
   serialize :billing_address, JSON
   serialize :shipping_address, JSON
 
   after_initialize do
     self.phase ||= 'open'
-    # self.items = [] if self.new_record?
   end
 
-  # def items
-  #   farm_store_order_items
-  # end
+  #todo logic for stock deduction
+  #todo validation for stock_count
 
   def total
     farm_store_order_items.inject(0){ |n, i| n + i.total }

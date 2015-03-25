@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @farm_store_pricing.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @farm_store_pricing.price %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @farm_store_pricing.quantity %>
+</p>
+
+<%= link_to 'Edit', edit_farm_store_pricing_path(@farm_store_pricing) %> |
+<%= link_to 'Back', farm_store_pricings_path %>

@@ -1,24 +1,21 @@
 class FarmStoreOrderItemsController < ApplicationController
   # There is no db table for this model
   before_action :set_current_order
-  before_action :set_farm_store_order_item, :only => [:destroy]
+  before_action :set_farm_store_order_item, :only => [:destroy, :update]
 
   respond_to :js
+
+  def update
+    @farm_store_order_item.update(farm_store_order_item_params)
+  end
 
   def create
     @farm_store_order_item = FarmStoreOrderItem.new(farm_store_order_item_params)
     @current_order.farm_store_order_items << @farm_store_order_item
-
-    # todo need to deal with situations where a page is rendered, but the Item has been deleted,
-
-
-    # if @farm_store_order_item.save
-    #
-    # end
   end
 
   def destroy
-    @farm_store_order_item.destroy
+    @deleted_farm_store_order_item_id = @farm_store_order_item.destroy.id
   end
 
   private

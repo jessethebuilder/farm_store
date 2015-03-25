@@ -1,7 +1,6 @@
 class CreateFarmStoreOrders < ActiveRecord::Migration
   def change
     create_table :farm_store_orders do |t|
-      t.text :items
       t.integer :makes_orders_id
       t.string :makes_orders_type
       t.string :phase
