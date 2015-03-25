@@ -12,9 +12,6 @@ class FarmStoreOrder < ActiveRecord::Base
     self.phase ||= 'open'
   end
 
-  #todo logic for stock deduction
-  #todo validation for stock_count
-
   def total
     farm_store_order_items.inject(0){ |n, i| n + i.total }
   end

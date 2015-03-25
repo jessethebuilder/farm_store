@@ -9,6 +9,7 @@ class CreateFarmStoreOrderItems < ActiveRecord::Migration
       t.float :tax_rate
       t.string :name
       t.float :price
+      t.integer :pricing_quantity
 
       t.timestamps null: false
     end

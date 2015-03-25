@@ -44,6 +44,6 @@ class FarmStoreItemsController < ApplicationController
     end
     # Only allow a trusted parameter "white list" through.
     def farm_store_item_params
-      params.require(:farm_store_item).permit(:name, :description, :quantity, :pricing => {})
+      params.require(:farm_store_item).permit(:name, :description, :quantity, :farm_store_pricing_id)
     end
 end

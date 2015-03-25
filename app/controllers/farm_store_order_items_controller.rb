@@ -25,7 +25,7 @@ class FarmStoreOrderItemsController < ApplicationController
   end
 
   def farm_store_order_item_params
-    params.require(:farm_store_order_item).permit(:farm_store_item_id, :pricing_key, :quantity, :price)
+    params.require(:farm_store_order_item).permit(:farm_store_item_id, :quantity, :price, :farm_store_pricing_id)
   end
 
   def set_current_order
