@@ -9,7 +9,7 @@ class FarmStoreItem < ActiveRecord::Base
 
   has_many :farm_store_order_items
 
-  validates :quantity, :presence => true, :numericality => {:greater_than_or_equal_to => 0}
+  validates :quantity, :presence => true, :numericality => {:greater_than_or_equal_to => 0, :only_integer => true}
 
   def tax_rate
     rate = read_attribute(:tax_rate) || farm_store_standard_tax_rate
@@ -17,6 +17,7 @@ class FarmStoreItem < ActiveRecord::Base
   end
 
   def farm_store_pricing_id=(id)
+  #todo not sure about this one
     farm_store_pricings << FarmStorePricing.find(id)
   end
 

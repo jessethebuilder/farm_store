@@ -33,10 +33,13 @@ class FarmStoreItemsController < ApplicationController
     end
   end
   # DELETE /farm_store_items/1
+
   def destroy
+    puts @farm_store_item
     @farm_store_item.destroy
     redirect_to farm_store_items_url, notice: 'Farm store item was successfully destroyed.'
   end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_farm_store_item
