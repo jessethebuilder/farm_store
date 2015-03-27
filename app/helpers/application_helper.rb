@@ -1,4 +1,3 @@
-module FarmStore
-  module ApplicationHelper
-  end
+module ApplicationHelper
+  include FarmStoreHelper
 end
