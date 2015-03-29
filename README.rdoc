@@ -1,3 +1,10 @@
 = FarmStore
 
-This project rocks and uses MIT-LICENSE.
+* Bootsy
+
+* Carrierwave
+* MiniMagick
+* Create Uploaders in Initializer
+  -FarmStoreItems (:images)
+
+* FarmTools

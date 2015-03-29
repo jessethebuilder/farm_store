@@ -5,12 +5,17 @@ class FarmStoreOrderItemsController < ApplicationController
 
   respond_to :js
 
-  def update
-    @farm_store_order_item.update(farm_store_order_item_params)
-  end
+  # def update
+  #   @farm_store_order_item.update(farm_store_order_item_params)
+  # end
 
   def create
-    @farm_store_order_item = FarmStoreOrderItem.new(farm_store_order_item_params)
+    f = farm_store_order_item_params
+
+    item = FarmStoreItem.find(f[:farm_store_item_id])
+    pricing = FarmStorePricing.find(f[:farm_store_pricing_id])
+
+    @farm_store_order_item = item.build_order_item(pricing, quantity: f[:quantity], price: f[:price])
     @current_order.farm_store_order_items << @farm_store_order_item
   end
 

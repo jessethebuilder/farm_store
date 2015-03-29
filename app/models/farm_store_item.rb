@@ -1,4 +1,6 @@
 class FarmStoreItem < ActiveRecord::Base
+  include CarrierWave
+
   validates :name, :presence => true
 
   has_many :farm_store_pricing_setters
@@ -16,9 +18,10 @@ class FarmStoreItem < ActiveRecord::Base
     rate * 0.01
   end
 
-  def farm_store_pricing_id=(id)
-  #todo not sure about this one
-    farm_store_pricings << FarmStorePricing.find(id)
+  def available_pricings
+    a = []
+    farm_store_pricings.each{ |p| a << p unless p.maximum_order_quantity(self) == 0 }
+    a
   end
 
   def build_order_item(pricing, quantity: 1, price: nil)
@@ -31,7 +34,6 @@ class FarmStoreItem < ActiveRecord::Base
     # the actual transaction occurs. This is suited for models that will not change much after creation. If they
     # are going to change frequently, some sort of error throwing and catching will be necessary to prevent unwanted
     # transactions.
-
     oi.name = self.name
     oi.tax_rate = self.tax_rate
     oi.quantity = quantity

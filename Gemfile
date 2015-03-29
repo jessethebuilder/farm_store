@@ -1,6 +1,12 @@
 source "https://rubygems.org"
 
 gemspec
+
+# gem 'carrierwave', '~> 0.10.0'
+# gem 'mini_magick', '~> 4.2'
+
+gem 'farm_tools', :git => 'https://github.com/jessethebuilder/farm_tools'
+
 #
 # # gem 'geocoder'
 # # gem 'rails', '4.2'

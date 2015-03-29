@@ -17,8 +17,12 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
 
   s.add_dependency "rails", "~> 4.2.0"
+  # s.add_dependency "carrierwave", "~> 0.10.0"
+  # s.add_dependency "mini_magick", "~> 4.2"
 
-  s.add_development_dependency "pg"
+  s.add_dependency 'farm_tools'
+
+  # s.add_development_dependency "pg"
 
 
 end
