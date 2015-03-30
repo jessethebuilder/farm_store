@@ -1,6 +1,5 @@
 class FarmStorePricing < ActiveRecord::Base
-  has_many :farm_store_pricing_setters
-  has_many :farm_store_items, through: :farm_store_pricing_setters
+  belongs_to :farm_store_item
 
   validates :name, presence: true
 

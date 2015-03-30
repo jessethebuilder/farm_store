@@ -1,15 +1,14 @@
-GIT
-  remote: https://github.com/jessethebuilder/farm_tools
-  revision: df0a1c2693b19030bae4cd4d3ef8b885bdbefc7b
-  specs:
-    farm_tools (0.0.3)
-
 PATH
   remote: .
   specs:
     farm_store (0.0.2)
       farm_tools
       rails (~> 4.2.0)
+
+PATH
+  remote: C:/Users/Bucky/Desktop/jesseweb/farm_tools/farm_tools
+  specs:
+    farm_tools (0.0.3)
 
 GEM
   remote: https://rubygems.org/

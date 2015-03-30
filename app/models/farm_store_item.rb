@@ -1,17 +1,21 @@
 class FarmStoreItem < ActiveRecord::Base
-  include CarrierWave
+  include MountableImagesHelper
 
   validates :name, :presence => true
 
-  has_many :farm_store_pricing_setters
-  has_many :farm_store_pricings, through: :farm_store_pricing_setters
+  has_many :farm_store_pricings
+  accepts_nested_attributes_for :farm_store_pricings
 
   has_many :farm_store_department_setters
   has_many :farm_store_departments, through: :farm_store_department_setters
 
   has_many :farm_store_order_items
 
+  #todo spec
+  has_many :mountable_images, as: :has_mountable_images, dependent: :destroy
+
   validates :quantity, :presence => true, :numericality => {:greater_than_or_equal_to => 0, :only_integer => true}
+
 
   def tax_rate
     rate = read_attribute(:tax_rate) || farm_store_standard_tax_rate

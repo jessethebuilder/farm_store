@@ -5,6 +5,8 @@ class CreateFarmStorePricings < ActiveRecord::Migration
       t.float :price
       t.integer :quantity
 
+      t.integer :farm_store_item_id
+
       t.timestamps null: false
     end
   end

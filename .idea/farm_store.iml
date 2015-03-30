@@ -117,6 +117,26 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="farm_tools (v0.0.3, C:/Users/Bucky/Desktop/jesseweb/farm_tools/farm_tools) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/db" />
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/app" />
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/bin" />
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/lib" />
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/.idea" />
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/config" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/db" />
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/app" />
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/bin" />
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/lib" />
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/.idea" />
+          <root url="file://$MODULE_DIR$/../farm_tools/farm_tools/config" />
+        </SOURCES>
+      </library>
+    </orderEntry>
     <orderEntry type="library" scope="PROVIDED" name="actionmailer (v4.2.1, ruby-2.1.5-p273) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionpack (v4.2.1, ruby-2.1.5-p273) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionview (v4.2.1, ruby-2.1.5-p273) [gem]" level="application" />
@@ -128,7 +148,6 @@
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.2, ruby-2.1.5-p273) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.8.3, ruby-2.1.5-p273) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, ruby-2.1.5-p273) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="farm_tools (v0.0.3@df0a1c, ruby-2.1.5-p273) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.3.3, ruby-2.1.5-p273) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.3, ruby-2.1.5-p273) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.7.0, ruby-2.1.5-p273) [gem]" level="application" />
